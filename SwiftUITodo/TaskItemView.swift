@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct TaskItemView: View {
     @EnvironmentObject var userData: UserData
     
@@ -21,18 +22,18 @@ struct TaskItemView: View {
                     .foregroundColor(.red)
                     .onTapGesture(count: 1) {
                         self.delete()
-                    }
+                    }.accessibilityIdentifier("delete_button")
                 
                 NavigationLink(destination: TaskEditView(task: task).environmentObject(self.userData)) {
                     Text(task.title)
-                }
+                }.accessibilityIdentifier("task_details_button")
             } else {
                 Button(action: { self.toggleDone() }) {
                     Text(self.task.title)
                 }
                 Spacer()
                 if task.isDone {
-                    Image(systemName: "checkmark").foregroundColor(.green)
+                    Image(systemName: "checkmark").foregroundColor(.green).accessibilityIdentifier("done_checkmark")
                 }
             }
         }

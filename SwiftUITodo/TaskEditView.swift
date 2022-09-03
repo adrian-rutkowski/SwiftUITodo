@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct TaskEditView: View {
     @EnvironmentObject var userData: UserData
     private let task: Task
@@ -40,7 +41,7 @@ struct TaskEditView: View {
                     leading: 20 - inset.leading,
                     bottom: 15 - inset.bottom,
                     trailing: 20 - inset.trailing
-                ))
+                )).accessibilityIdentifier("edit_task_textfield")
             
             Spacer()
         }

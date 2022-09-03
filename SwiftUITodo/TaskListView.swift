@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct TaskListView: View {
     @EnvironmentObject var userData: UserData
     @State var draftTitle: String = ""
@@ -15,7 +16,7 @@ struct TaskListView: View {
     
     var body: some View {
         List {
-            TextField("Create a New Task...", text: $draftTitle, onCommit: self.createTask)
+            TextField("Create a New Task...", text: $draftTitle, onCommit: self.createTask).accessibilityIdentifier("create_new_task_textfield")
             ForEach(self.userData.tasks) { task in
                 TaskItemView(task: task, isEditing: self.$isEditing)
             }
@@ -23,9 +24,9 @@ struct TaskListView: View {
         .navigationBarTitle(Text("Tasks 👀"))
         .navigationBarItems(trailing: Button(action: { self.isEditing.toggle() }) {
             if !self.isEditing {
-                Text("Edit")
+                Text("Edit").accessibilityIdentifier("edit_button")
             } else {
-                Text("Done").bold()
+                Text("Done").bold().accessibilityIdentifier("done_button")
             }
         })
     }
