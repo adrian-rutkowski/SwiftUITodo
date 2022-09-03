@@ -21,6 +21,7 @@
 		3A85872028C3E96D0038F1D1 /* UserFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85871F28C3E96D0038F1D1 /* UserFlowTests.swift */; };
 		3A85872228C3EF520038F1D1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85872128C3EF520038F1D1 /* Screen.swift */; };
 		3A85872428C3EFA80038F1D1 /* TaskListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85872328C3EFA80038F1D1 /* TaskListScreen.swift */; };
+		3A85872628C3F7580038F1D1 /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85872528C3F7580038F1D1 /* XCUIApplication+Extensions.swift */; };
 		C8E0A25922A789D100E940E8 /* UserDefaultsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3A85871F28C3E96D0038F1D1 /* UserFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlowTests.swift; sourceTree = "<group>"; };
 		3A85872128C3EF520038F1D1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3A85872328C3EFA80038F1D1 /* TaskListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListScreen.swift; sourceTree = "<group>"; };
+		3A85872528C3F7580038F1D1 /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				3A85871D28C3E89C0038F1D1 /* UITestCase.swift */,
+				3A85872528C3F7580038F1D1 /* XCUIApplication+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A85872028C3E96D0038F1D1 /* UserFlowTests.swift in Sources */,
+				3A85872628C3F7580038F1D1 /* XCUIApplication+Extensions.swift in Sources */,
 				3A85871E28C3E89C0038F1D1 /* UITestCase.swift in Sources */,
 				3A85872428C3EFA80038F1D1 /* TaskListScreen.swift in Sources */,
 				3A85872228C3EF520038F1D1 /* Screen.swift in Sources */,

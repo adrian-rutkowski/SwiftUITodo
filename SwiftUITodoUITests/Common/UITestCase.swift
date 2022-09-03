@@ -9,8 +9,9 @@ class UITestCase: XCTestCase {
         app.launchArguments = ["ui-testing"]
         app.launch()
     }
-
+    
     override func tearDown() {
-            app.terminate()
-        }
+        app.terminate()
+        app.uninstall()
+    }
 }
