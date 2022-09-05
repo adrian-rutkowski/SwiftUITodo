@@ -5,7 +5,7 @@ class UserFlowTests: UITestCase {
         let taskName = "new task"
         TaskListScreen(app: app)
             .addNewTask(taskName)
-            .verifyIfTaskIsOnTheList(taskName, onTheList: true)
+            .assert { $0.verifyIfTaskIsOnTheList(taskName, onTheList: true)}
     }
     
     func testMarkTaskAsCompleted() {

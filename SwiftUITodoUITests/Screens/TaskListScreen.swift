@@ -4,28 +4,28 @@ struct TaskListScreen: Screen {
     let app: XCUIApplication
     
     private enum Identifiers {
-        static let doneButton = "done_button"
-        static let editButton = "edit_button"
-        static let newTaskField = "create_new_task_textfield"
-        static let doneCheckmark = "done_checkmark"
-        static let deleteButton = "delete_button"
-        static let taskDetailsButton = "task_details_button"
+        static let doneButtonId = "done_button"
+        static let editButtonId = "edit_button"
+        static let newTaskFieldId = "create_new_task_textfield"
+        static let doneCheckmarkId = "done_checkmark"
+        static let deleteButtonId = "delete_button"
+        static let taskDetailsButtonId = "task_details_button"
     }
+    
+    var newTaskField: XCUIElement {app.textFields[Identifiers.newTaskFieldId].firstMatch}
     
     func addNewTask(_ taskName: String) -> Self {
-        let field = app.textFields[Identifiers.newTaskField].firstMatch
-        field.tap()
-        field.typeText(taskName)
-        app.keyboards.buttons["Return"].tap()
+        newTaskField.tap()
+        newTaskField.typeText(taskName)
+        Keyboard.tap(.Return)
         return self
     }
     
-    func verifyIfTaskIsOnTheList(_ taskName: String, onTheList: Bool) -> Self {
+    func verifyIfTaskIsOnTheList(_ taskName: String, onTheList: Bool) -> Bool {
         if onTheList == true {
-            XCTAssertTrue(app.cells["\(taskName)"].exists)
+            return app.cells["\(taskName)"].waitUntilDisplayed()
         } else {
-            XCTAssertTrue(!app.cells["\(taskName)"].exists)
+            return !app.cells["\(taskName)"].waitUntilDisplayed()
         }
-        return self
     }
 }
