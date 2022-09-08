@@ -5,8 +5,8 @@ struct Keyboard {
     enum Key: String {
         case done = "Done"
         case delete = "delete"
-        case Delete = "Delete"
         case Return = "Return"
+        case selectAll = "Select All"
 
         var query: XCUIElementQuery {
             switch self {
@@ -14,10 +14,10 @@ struct Keyboard {
                 return XCUIApplication().buttons
             case .delete:
                 return XCUIApplication().keys
-            case .Delete:
-                return XCUIApplication().keys
             case .Return:
                 return XCUIApplication().buttons
+            case .selectAll:
+                return XCUIApplication().menuItems
             }
         }
     }

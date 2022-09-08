@@ -26,7 +26,7 @@ struct TaskItemView: View {
                 
                 NavigationLink(destination: TaskEditView(task: task).environmentObject(self.userData)) {
                     Text(task.title)
-                }.accessibilityIdentifier("task_details_button")
+                }
             } else {
                 Button(action: { self.toggleDone() }) {
                     Text(self.task.title)
