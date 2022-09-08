@@ -1,14 +1,3 @@
-# SwiftUITodo
-
-SwiftUITodo is an example to-do list application using [SwiftUI](https://developer.apple.com/xcode/swiftui/) which is first introduced in WWDC19 keynote.
-
-![screenshot](https://user-images.githubusercontent.com/931655/58843349-f6dbf400-8626-11e9-8227-fbd369c29515.png)
-
-## Requirements
-
-* Xcode 11 Beta 6
-* Swift 5.1
-
-## License
-
-SwiftUITodo is under MIT license. See the [LICENSE](LICENSE) file for more info.
+# SwiftUITodo UI tests
+Sample UI tests for native iOS app.
+SCR-20220908-mbe.png![image](https://user-images.githubusercontent.com/60190502/189143112-ead273e8-3cb6-4a7c-b3a6-a6c79ff044be.png)
